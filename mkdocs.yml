@@ -70,6 +70,7 @@ repo_url: https://github.com/meysam81/terraform-modules
 site_author: Meysam Azad <meysam@developer-friendly.blog>
 site_description: This repo holds the Terraform modules that I have created and used in my projects.
 site_dir: mkdocs
+site_url: https://meysam81.github.io/terraform-modules
 site_name: Terraform Modules
 strict: true
 theme:
