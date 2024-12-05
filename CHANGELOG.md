@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.7](https://github.com/meysam81/terraform-modules/compare/v0.1.6...v0.1.7) (2024-12-05)
+
+
+### Bug Fixes
+
+* **docs:** specify site-url in mkdocs config ([567247a](https://github.com/meysam81/terraform-modules/commit/567247a3b82562edc0dd735a28e7247f39156d0b))
+
 ## [0.1.6](https://github.com/meysam81/terraform-modules/compare/v0.1.5...v0.1.6) (2024-12-05)
 
 
