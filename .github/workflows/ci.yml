@@ -39,8 +39,7 @@ jobs:
           release-type: terraform-module
 
   build-docs:
-    needs: release-please
-    if: needs.release-please.outputs.releases_created == 'true'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
