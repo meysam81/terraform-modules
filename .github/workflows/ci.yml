@@ -89,15 +89,11 @@ jobs:
           trivy-config: trivy.yaml
           format: "sarif"
           output: "trivy-results.sarif"
-      - name: Upload Trivy results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: trivy-results.sarif
       - if: always()
         name: Upload Trivy results to Github Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: trivy-results
+          name: trivy-results-${{ matrix.scan-type }}
           path: trivy-results.sarif
 
   kubescape:
