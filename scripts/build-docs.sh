@@ -2,6 +2,8 @@
 
 set -eu
 
+command -v terraform-docs > /dev/null || (echo "terraform-docs is not installed" && exit 1)
+
 rootdir=.
 modules=$(find $rootdir -maxdepth 2 -type f -name '*.tf' -exec dirname {} \; | sort -u)
 
