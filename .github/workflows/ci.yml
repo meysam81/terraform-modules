@@ -36,7 +36,7 @@ jobs:
         name: Release please
         uses: googleapis/release-please-action@v4
         with:
-          release-type: simple
+          release-type: terraform-module
 
   tofu-docs:
     needs: release-please
