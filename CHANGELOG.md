@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.6](https://github.com/meysam81/terraform-modules/compare/v0.1.5...v0.1.6) (2024-12-05)
+
+
+### Bug Fixes
+
+* **CI:** deploy static dir to Pages ([2e66347](https://github.com/meysam81/terraform-modules/commit/2e6634798dc32bbbd4627df52863f0954e7565a2))
+
 ## [0.1.5](https://github.com/meysam81/terraform-modules/compare/v0.1.4...v0.1.5) (2024-12-05)
 
 
