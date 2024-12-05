@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/meysam81/terraform-modules/compare/v0.1.0...v0.1.1) (2024-12-05)
+
+
+### Bug Fixes
+
+* **CI:** pin setup-python to v5 ([23ad290](https://github.com/meysam81/terraform-modules/commit/23ad29082fe798ebafb6cee6d3ef1b24109dce29))
+
 ## 0.1.0 (2024-12-05)
 
 
