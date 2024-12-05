@@ -68,7 +68,7 @@ jobs:
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
       - name: Create version
         run: |
-          mike deploy --push --force --update-aliases ${{ needs.release-please.outputs.tag_name }} latest
+          mike deploy --push --update-aliases ${{ needs.release-please.outputs.tag_name }} latest
 
   trivy:
     runs-on: ubuntu-latest
