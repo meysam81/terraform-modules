@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/meysam81/terraform-modules/compare/v0.1.4...v0.1.5) (2024-12-05)
+
+
+### Bug Fixes
+
+* **CI:** switch gear and deploy to pages using GH action ([4aba221](https://github.com/meysam81/terraform-modules/commit/4aba221788da1bdc0fc7d2aeeeddca48b78d757d))
+
 ## [0.1.4](https://github.com/meysam81/terraform-modules/compare/v0.1.3...v0.1.4) (2024-12-05)
 
 
