@@ -1,0 +1,124 @@
+edit_uri: blob/main/docs/
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/meysam81
+  version:
+    provider: mike
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+plugins:
+  - exclude:
+      glob:
+        - SUMMARY.md
+        - "**/README.md"
+        - "*.tmp"
+        - "*.gz"
+      regex:
+        - .*\.(tmp|bin|tar)$
+  - search:
+      lang: en
+  - tags
+  - glightbox
+  - offline
+  - mike:
+      canonical_version: null
+      css_dir: css
+      javascript_dir: js
+      version_selector: true
+remote_branch: gh-pages
+remote_name: origin
+repo_name: meysam81/terraform-modules
+repo_url: https://github.com/meysam81/terraform-modules
+site_author: Meysam Azad <meysam@developer-friendly.blog>
+site_description: This repo holds the Terraform modules that I have created and used in my projects.
+site_dir: mkdocs
+site_name: Terraform Modules
+strict: true
+theme:
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+    - content.tooltips
+    - header.autohide
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.path
+    - navigation.prune
+    - navigation.sections
+    # - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  font:
+    code: Roboto Mono
+    text: Roboto
+  icon:
+    repo: fontawesome/brands/github
+  name: material
+  palette:
+    - media: (prefers-color-scheme)
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference

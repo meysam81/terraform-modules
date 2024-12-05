@@ -1,0 +1,4 @@
+mike<3
+mkdocs<2
+mkdocs-exclude<2
+mkdocs-material<10
