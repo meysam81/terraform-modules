@@ -57,7 +57,6 @@ plugins:
   - search:
       lang: en
   - tags
-  - glightbox
   - offline
   - mike:
       canonical_version: null
