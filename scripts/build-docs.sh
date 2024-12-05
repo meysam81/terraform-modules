@@ -14,7 +14,7 @@ for module in $modules; do
 done
 
 find docs -type f -name '*.md' | while read -r doc; do
-  if [[ "$doc" == "docs/index.md" ]]; then
+  if [[ "$doc" == "docs/README.md" ]]; then
     continue
   fi
 
