@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/meysam81/terraform-modules/compare/v0.1.3...v0.1.4) (2024-12-05)
+
+
+### Bug Fixes
+
+* **CI:** grant write permission to mike deploy ([cb734f5](https://github.com/meysam81/terraform-modules/commit/cb734f55fe2aa8bf3e90ccad2bb281abfdf89399))
+
 ## [0.1.3](https://github.com/meysam81/terraform-modules/compare/v0.1.2...v0.1.3) (2024-12-05)
 
 
