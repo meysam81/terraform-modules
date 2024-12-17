@@ -27,3 +27,15 @@ variable "events" {
   type        = list(string)
   default     = ["push"]
 }
+
+variable "special" {
+  description = "Whether to include special characters in the secret"
+  type        = bool
+  default     = false
+}
+
+variable "secret_phrase" {
+  description = "The secret phrase to use for the webhook secret (default: auto-generated)"
+  type        = string
+  default     = ""
+}

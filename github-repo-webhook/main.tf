@@ -1,6 +1,8 @@
 resource "random_password" "this" {
+  count = local.create_secret ? 1 : 0
+
   length  = var.secret_length
-  special = false
+  special = var.special
 }
 
 resource "github_repository_webhook" "this" {
@@ -9,7 +11,7 @@ resource "github_repository_webhook" "this" {
   configuration {
     url          = var.webhook_url
     content_type = var.content_type
-    secret       = random_password.this.result
+    secret       = local.create_secret ? random_password.this[0].result : var.secret_phrase
     insecure_ssl = false
   }
 

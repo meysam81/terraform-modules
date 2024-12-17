@@ -1,4 +1,4 @@
 output "secret_value" {
-  value     = random_password.this.result
+  value     = try(random_password.this[0].result, null)
   sensitive = true
 }

@@ -32,6 +32,8 @@ No modules.
 | <a name="input_events"></a> [events](#input\_events) | The events to trigger the webhook | `list(string)` | <pre>[<br/>  "push"<br/>]</pre> | no |
 | <a name="input_repository"></a> [repository](#input\_repository) | The repository to add the webhook to | `string` | n/a | yes |
 | <a name="input_secret_length"></a> [secret\_length](#input\_secret\_length) | The length of the webhook secret string | `number` | `32` | no |
+| <a name="input_secret_phrase"></a> [secret\_phrase](#input\_secret\_phrase) | The secret phrase to use for the webhook secret (default: auto-generated) | `string` | `""` | no |
+| <a name="input_special"></a> [special](#input\_special) | Whether to include special characters in the secret | `bool` | `false` | no |
 | <a name="input_webhook_url"></a> [webhook\_url](#input\_webhook\_url) | The URL to send the webhook to | `string` | n/a | yes |
 
 ## Outputs

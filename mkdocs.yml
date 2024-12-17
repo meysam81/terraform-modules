@@ -65,7 +65,7 @@ plugins:
       version_selector: true
 remote_branch: gh-pages
 remote_name: origin
-repo_name: meysam81/terraform-modules
+repo_name: GitHub
 repo_url: https://github.com/meysam81/terraform-modules
 site_author: Meysam Azad <meysam@developer-friendly.blog>
 site_description: This repo holds the Terraform modules that I have created and used in my projects.
