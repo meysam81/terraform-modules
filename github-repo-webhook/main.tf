@@ -11,7 +11,7 @@ resource "github_repository_webhook" "this" {
   configuration {
     url          = var.webhook_url
     content_type = var.content_type
-    secret       = local.create_secret ? random_password.this[0].result : var.secret_phrase
+    secret       = coalesce(try(random_password.this[0].result, null), var.secret_phrase)
     insecure_ssl = false
   }
 
