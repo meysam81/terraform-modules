@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/meysam81/terraform-modules/compare/v0.2.0...v0.2.1) (2024-12-17)
+
+
+### Miscellaneous Chores
+
+* **gh-webhook:** allow overriding the secret phrase ([fe4b685](https://github.com/meysam81/terraform-modules/commit/fe4b685fb62dc38bab788bf75ef5432b5fa5074f))
+
 ## [0.2.0](https://github.com/meysam81/terraform-modules/compare/v0.1.7...v0.2.0) (2024-12-07)
 
 
