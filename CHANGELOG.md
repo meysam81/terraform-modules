@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/meysam81/terraform-modules/compare/v0.2.1...v0.2.2) (2024-12-17)
+
+
+### Bug Fixes
+
+* **gh-webhook:** use coalesce for detecting nulls ([1799f56](https://github.com/meysam81/terraform-modules/commit/1799f56cb571f2447945f940253cb96442ac931c))
+
 ## [0.2.1](https://github.com/meysam81/terraform-modules/compare/v0.2.0...v0.2.1) (2024-12-17)
 
 
