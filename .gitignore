@@ -41,3 +41,4 @@ terraform.rc
 
 mkdocs
 **/.terraform.lock.hcl
+node_modules
