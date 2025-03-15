@@ -10,6 +10,10 @@ ci:
 
     [skip ci]
   autoupdate_schedule: weekly
+  skip:
+    - tofu_fmt
+    - tofu_tflint
+    - tofu_docs
   submodules: false
 
 repos:
