@@ -15,14 +15,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       - name: Setup OpenTofu
-        uses: opentofu/setup-opentofu@v1
+        uses: opentofu/setup-opentofu@9d84900f3238fab8cd84ce47d658d25dd008be2f # v1.0.8
       - name: Tofu format
         run: |
           tofu fmt -check -recursive
 
-  semantic-release:
+  release-please:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
@@ -32,22 +32,12 @@ jobs:
       pull-requests: write
       id-token: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - id: release-please
+        name: Release please
+        uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
         with:
-          fetch-depth: 0
-          ssh-key: ${{ secrets.GH_DEPLOY_KEY }}
-      - name: Setup bun
-        uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
-      - name: Install bun deps
-        run: bun install
-      - id: semantic-release
-        name: Release
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: bunx semantic-release@v24
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
 
   build-docs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -61,11 +51,11 @@ jobs:
       id-token: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           fetch-depth: 0
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         with:
           python-version: 3.x
       - name: Install dependencies
@@ -82,14 +72,14 @@ jobs:
       - name: Build the docs
         run: mkdocs build
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
         with:
           path: mkdocs
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
 
   trivy:
     runs-on: ubuntu-latest
@@ -101,9 +91,9 @@ jobs:
           - config
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       - name: Run Trivy vulnerability scanner in fs mode
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@8f28faec26515256b6d22074d1d2a8986f4cbd87 # master
         with:
           scan-type: ${{ matrix.scan-type }}
           scan-ref: "."
@@ -112,7 +102,7 @@ jobs:
           output: "trivy-results.sarif"
       - if: always()
         name: Upload Trivy results to Github Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: trivy-results-${{ matrix.scan-type }}
           path: trivy-results.sarif
@@ -124,14 +114,14 @@ jobs:
       contents: read
       security-events: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: kubescape/github-action@main
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: kubescape/github-action@2161b5fbad3f61d48925b005420507d4856c6e02 # main
         continue-on-error: true
         with:
           frameworks: AllControls
           outputFile: results.sarif
           format: sarif
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: kubescape-results
           path: results.sarif
@@ -149,9 +139,9 @@ jobs:
       issues: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       - name: PR Labeler
-        uses: srvaroa/labeler@master
+        uses: srvaroa/labeler@075ed09ed89dbe3214feeb50731ff61f9ef75cf7 # master
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         with:
