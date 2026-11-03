@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.6](https://github.com/meysam81/terraform-modules/compare/v0.2.5...v0.2.6) (2026-11-03)
+
+
+### Bug Fixes
+
+* **ci:** make kubescape's SARIF readable before uploading it ([#40](https://github.com/meysam81/terraform-modules/issues/40)) ([0d3915b](https://github.com/meysam81/terraform-modules/commit/0d3915b6418affc07abd04576d12c9a1db4f2d2a))
+
+
+### CI
+
+* renovate on the shared preset, release with release-please instead of semantic-release ([#38](https://github.com/meysam81/terraform-modules/issues/38)) ([1d15b92](https://github.com/meysam81/terraform-modules/commit/1d15b920da5f0cd89f9046fe957c3fd9e9c2d08c))
+
 ## [0.2.2](https://github.com/meysam81/terraform-modules/compare/v0.2.1...v0.2.2) (2024-12-17)
 
 
